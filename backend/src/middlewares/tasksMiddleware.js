@@ -1,7 +1,7 @@
 const validateFieldTitle = (req, res, next) => {
     const { body } = req;
 
-    if (body.title === undefined || 'title' in body) {
+    if (body.title === undefined) {
         res.status(400).json({ errorMessage: 'The field title is required' });
     }
 
@@ -15,7 +15,7 @@ const validateFieldTitle = (req, res, next) => {
 const validateFieldStatus = (req, res, next) => {
     const { body } = req;
 
-    if (body.status === undefined || 'status' in body) {
+    if (body.status === undefined) {
         res.status(400).json({ errorMessage: 'The field status is required' });
     }
 
